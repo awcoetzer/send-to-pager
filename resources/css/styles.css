@@ -82,7 +82,7 @@
   --project-typeface-press-start: 'Press Start 2P', cursive;
 
   /* color palettes */
-  --project-clr-pager-bg: hsl(196, 12%, 18%);
+  
   --project-clr-pager-display-bg: hsl(153, 24%, 69%);
   --project-clr-pager-display-bg-tint: hsl(153, 24%, 89%);
   --project-clr-phone-bg: hsl(0, 0%, 85%);
