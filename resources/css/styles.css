@@ -72,31 +72,33 @@
 
   --clr-grey: hsl(0, 0%, 20%);
 
-  /* --clr-accent-shade: ;
-  --clr-accent: ;
-  --clr-accent-tint: ; */
+  --clr-accent-shade: ;
+  --clr-accent-pink: hsl(315, 100%, 70%);
+  --clr-accent-purple: hsl(240, 100%, 70%);
+  --clr-accent-tint: ;
 
   /* project document setup */
   /* project typeface */
   --project-typeface-press-start: 'Press Start 2P', cursive;
 
   /* color palettes */
-  --project-clr-pager-bg: #283033;
-  --project-clr-pager-display-bg: #9EC4B3;
-  --project-clr-phone-bg: #D9D9D9;
-  --project-clr-phone-display-bg: #444444;
+  --project-clr-pager-bg: hsl(196, 12%, 18%);
+  --project-clr-pager-display-bg: hsl(153, 24%, 69%);
+  --project-clr-pager-display-bg-tint: hsl(153, 24%, 89%);
+  --project-clr-phone-bg: hsl(0, 0%, 85%);
+  --project-clr-phone-display-bg: hsl(0, 0%, 27%);
 
-  --project-clr-reset-btn: #BE482A;
-  --project-clr-send-btn: #3D9C7C;
+  --project-clr-reset-btn: hsl(12, 64%, 45%);
+  --project-clr-send-btn: hsl(160, 44%, 43%);
 
-  --project-clr-border: #000000;
+  --project-clr-border: hsl(0, 0%, 0%);
 
   --project-clr-main-shade: ;
   --project-clr-main: ;
   --project-clr-main-tint: ;
 
-  --project-clr-grey-light: #F8F8F8;
-  --project-clr-grey-dark: #000000;
+  --project-clr-grey-light: hsl(0, 0%, 97%);
+  --project-clr-grey-dark: hsl(0, 0%, 0%);
 
   --project-clr-accent-shade: ;
   --project-clr-accent: ;
@@ -115,13 +117,13 @@ html {
 
 *:focus {
   outline: none;
-  box-shadow: 0 0 0.1rem 0.2rem red;
+  box-shadow: 0 0 0.1rem 0.4rem var(--clr-accent-purple) !important;
 }
 
 
 ::selection {
-  color: red;
-  background-color: black;
+  color: var(--clr-grey);
+  background-color: var(--clr-main-shade);
 }
 
 body {
@@ -210,7 +212,7 @@ body {
 /* sections */
 /* section-hero */
 .section-hero {
-  background-color: var(--clr-main);
+  background-image: linear-gradient(4deg, var(--clr-main) 5%, var(--clr-accent-pink), var(--clr-accent-purple) 60%);
 }
 
 .hero-box {
@@ -269,15 +271,16 @@ body {
 }
 
 /* section required version of project */
-.section-pager-req {}
+.section-pager {}
 
-.pager-req {
+.pager {
   font-family: var(--project-typeface-press-start);
 }
 
-.pager-req-project {
+.pager-project {
   margin: 0 auto;
-  width: 90rem;
+  padding: 0 var(--spacing-48);
+  max-width: 90rem;
   height: 140rem;
   display: flex;
   flex-direction: column;
@@ -310,7 +313,35 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: center;
   background-color: var(--project-clr-pager-display-bg);
+  overflow: auto;
+}
+
+.flash {
+  animation: flash-pager 2s linear normal;
+}
+
+@keyframes flash-pager {
+  0% {
+    background-color: var(--project-clr-pager-display-bg);
+  }
+
+  25% {
+    background-color: var(--project-clr-pager-display-bg-tint);
+  }
+
+  50% {
+    background-color: var(--project-clr-pager-display-bg);
+  }
+
+  75% {
+    background-color: var(--project-clr-pager-display-bg-tint);
+  }
+
+  100% {
+    background-color: var(--project-clr-pager-display-bg);
+  }
 }
 
 .pager-display-text {
@@ -344,6 +375,7 @@ body {
   align-items: center;
   background-color: var(--project-clr-phone-display-bg);
   margin-bottom: 1.8rem;
+  overflow: auto;
 }
 
 .phone-display-text {
@@ -375,7 +407,8 @@ body {
 
 .btn {
   border: 3px solid var(--project-clr-border);
-  width: 75.2rem;
+  width: 100%;
+  max-width: 75.2rem;
   height: 9.4rem;
   font-family: inherit;
   font-size: 4rem;
@@ -415,3 +448,57 @@ body {
 }
 
 /* media queries */
+
+/* 1150px */
+@media only screen and (max-width: 72em) {
+  html {
+    font-size: var(--percentage-font-9);
+  }
+}
+
+/* 944px */
+@media only screen and (max-width: 59em) {
+  html {
+    font-size: var(--percentage-font-8);
+  }
+
+/* 640px */
+@media only screen and (max-width: 40em) {
+  .hero-box {
+    flex-direction: column;
+  }
+
+  .hero-text-box {
+    width: 80%;
+  }
+
+  .hero-img-box {
+    width: 80%;
+    order: -1;
+  }
+}
+
+/* 420 */
+@media only screen and (max-width: 26em) {
+  .container {
+    padding: 0 var(--spacing-24);
+  }
+
+  .hero-text-box {
+    width: 100%;
+  }
+
+  .hero-img-box {
+    width: 100%;
+  }
+
+  .link--hero {
+    text-align: center;
+    width: 100%;
+    display: block;
+  }
+
+  .link--hero:first-of-type {
+    margin-bottom: var(--spacing-24);
+  }
+}
