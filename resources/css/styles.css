@@ -1,0 +1,417 @@
+/* project variables */
+:root {
+  /* generic document setup */
+  /* typeface */
+  --typeface-sans: 'Inter', sans-serif;
+
+  /* percentage fonts */
+  --percentage-font-10: 62.5%;
+  --percentage-font-9: 56.25%;
+  --percentage-font-8: 50%;
+  --percentage-font-7: 43.75%;
+
+  /* font size */
+  --font-10: 1rem;
+  --font-12: 1.2rem;
+  --font-14: 1.4rem;
+  --font-16: 1.6rem;
+  --font-18: 1.8rem;
+  --font-20: 2rem;
+  --font-24: 2.4rem;
+  --font-30: 3rem;
+  --font-32: 3.2rem;
+  --font-36: 3.6rem;
+  --font-44: 4.4rem;
+  --font-52: 5.2rem;
+  --font-62: 6.2rem;
+  --font-74: 7.4rem;
+  --font-86: 8.6rem;
+  --font-98: 9.8rem;
+
+  /* font weight */
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+  --font-weight-700: 700;
+
+  /* spacing system */
+  --spacing-2: 0.2rem;
+  --spacing-4: 0.4rem;
+  --spacing-8: 0.8rem;
+  --spacing-12: 1.2rem;
+  --spacing-16: 1.6rem;
+  --spacing-24: 2.4rem;
+  --spacing-32: 3.2rem;
+  --spacing-48: 4.8rem;
+  --spacing-64: 6.4rem;
+  --spacing-80: 8rem;
+  --spacing-96: 9.6rem;
+  --spacing-128: 12.8rem;
+
+  /* border radius */
+  --border-rad-05: 0.5rem;
+  --border-rad-1: 1rem;
+  --border-rad-100: 10rem;
+  --border-rad-round: 50%;
+
+  /* line height */
+  --line-height-1: 1;
+  --line-height-11: 1.1;
+  --line-height-15: 1.5;
+  --line-height-17: 1.7;
+
+  /* letter spacing */
+  --letter-space-n05: -0.5px;
+  --letter-space-n1: -1px;
+  --letter-space-p05: 0.5px;
+  --letter-space-p1: 1px;
+
+  /* color palettes */
+  --clr-main-shade: hsl(45, 100%, 60%);
+  --clr-main: hsl(45, 100%, 70%);
+  --clr-main-tint: hsl(45, 100%, 80%);
+
+  --clr-grey: hsl(0, 0%, 20%);
+
+  /* --clr-accent-shade: ;
+  --clr-accent: ;
+  --clr-accent-tint: ; */
+
+  /* project document setup */
+  /* project typeface */
+  --project-typeface-press-start: 'Press Start 2P', cursive;
+
+  /* color palettes */
+  --project-clr-pager-bg: #283033;
+  --project-clr-pager-display-bg: #9EC4B3;
+  --project-clr-phone-bg: #D9D9D9;
+  --project-clr-phone-display-bg: #444444;
+
+  --project-clr-reset-btn: #BE482A;
+  --project-clr-send-btn: #3D9C7C;
+
+  --project-clr-border: #000000;
+
+  --project-clr-main-shade: ;
+  --project-clr-main: ;
+  --project-clr-main-tint: ;
+
+  --project-clr-grey-light: #F8F8F8;
+  --project-clr-grey-dark: #000000;
+
+  --project-clr-accent-shade: ;
+  --project-clr-accent: ;
+  --project-clr-accent-tint: ;
+}
+
+html {
+  font-size: var(--percentage-font-10);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0.1rem 0.2rem red;
+}
+
+
+::selection {
+  color: red;
+  background-color: black;
+}
+
+body {
+  font-family: var(--typeface-sans);
+  font-size: var(--font-16);
+  font-weight: var(--font-weight-400);
+  line-height: var(--line-height-1);
+  letter-spacing: var(--letter-space-n05);
+  color: var(--clr-grey);
+  background-color: #eee;
+}
+
+/* repeatable styles */
+.container {
+  margin: 0 auto;
+  padding: 0 var(--spacing-48);
+  max-width: 120rem;
+}
+
+.container--hero {
+  max-width: 130rem;
+}
+
+.section-padding {
+  padding: var(--spacing-96) 0;
+}
+
+.pre-heading {
+  display: block;
+  font-size: var(--font-12);
+  font-weight: var(--font-weight-700);
+  line-height: var(--line-height-15);
+  letter-spacing: var(--letter-space-p1);
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-12);
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  line-height: var(--line-height-11);
+  letter-spacing: var(--letter);
+}
+
+.heading-primary {
+  font-size: var(--font-44);
+  margin-bottom: var(--spacing-48);
+}
+
+.heading-secondary {
+  font-size: var(--font-44);
+  margin-bottom: var(--spacing-48);
+}
+
+.heading-tertiary {
+  font-size: var(--font-44);
+  margin-bottom: var(--spacing-48);
+}
+
+.link,
+.link:link,
+.link:visited {
+  display: inline-block;
+  font-size: var(--font-16);
+  font-weight: var(--font-weight-500);
+  line-height: var(--line-height-15);
+  text-decoration: none;
+  color: var(--clr-grey);
+  cursor: pointer;
+}
+
+/* helper classes */
+
+.center-text {
+  text-align: center;
+}
+
+.margin-right-sm {
+  margin-right: var(--spacing-16);
+}
+
+.margin-bottom-sm {
+  margin-bottom: var(--spacing-24);
+}
+
+/* sections */
+/* section-hero */
+.section-hero {
+  background-color: var(--clr-main);
+}
+
+.hero-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text-box {
+  width: 50%;
+}
+
+.hero-text {
+  font-size: var(--font-18);
+  line-height: var(--line-height-15);
+}
+
+.hero-img-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 500px;
+  z-index: 1;
+}
+
+.link--hero,
+.link-hero:link,
+.link-hero:visited {
+  padding: var(--spacing-16) var(--spacing-24);
+  border-radius: var(--border-rad-05);
+  background-color: #eee;
+  transition: color 0.15s ease-in, transform 0.15s ease-in, box-shadow 0.15s ease-in;
+  box-shadow: 0 0.3rem 0.4rem -0.4rem var(--clr-grey);
+}
+
+.link--hero:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0.6rem 0.6rem -0.6rem var(--clr-grey);
+}
+
+.link--hero:active {
+  transform: translateY(0);
+}
+
+.scrimba {
+  background-color: var(--clr-main-shade);
+}
+
+.scrimba:hover {
+  background-color: var(--clr-main-tint);
+}
+
+/* section required version of project */
+.section-pager-req {}
+
+.pager-req {
+  font-family: var(--project-typeface-press-start);
+}
+
+.pager-req-project {
+  margin: 0 auto;
+  width: 90rem;
+  height: 140rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12.6rem;
+  background-color: #fff;
+}
+
+.pager-box {
+  width: 79rem;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.3rem;
+  background-color: var(--project-clr-pager-bg);
+}
+
+.pager-heading {
+  font-size: 4rem;
+  line-height: 4rem;
+  color: var(--project-clr-grey-light);
+}
+
+.pager-display {
+  width: 73.7rem;
+  height: 13.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--project-clr-pager-display-bg);
+}
+
+.pager-display-text {
+  font-size: 5rem;
+  line-height: 5rem;
+  color: var(--project-clr-grey-dark);
+}
+
+.phone-box {
+  width: 79rem;
+  height: 91.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--project-clr-phone-bg);
+}
+
+.phone-heading {
+  font-size: 4rem;
+  line-height: 4rem;
+  color: var(--project-clr-grey-dark);
+  margin-bottom: 2.2rem;
+}
+
+.phone-display {
+  width: 75.4rem;
+  height: 13.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--project-clr-phone-display-bg);
+  margin-bottom: 1.8rem;
+}
+
+.phone-display-text {
+  font-size: 5rem;
+  line-height: 5rem;
+  color: var(--project-clr-grey-light);
+}
+
+.phone-keypad {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.7rem;
+  margin-bottom: 1.8rem;
+}
+
+.phone-keypad--btn {
+  border: none;
+  width: 23.9rem;
+  height: 9.4rem;
+  font-family: inherit;
+  font-size: 4rem;
+  line-height: 4rem;
+  color: var(--project-clr-grey-dark);
+  background-color: var(--project-clr-grey-light);
+  cursor: pointer;
+}
+
+.btn {
+  border: 3px solid var(--project-clr-border);
+  width: 75.2rem;
+  height: 9.4rem;
+  font-family: inherit;
+  font-size: 4rem;
+  line-height: 4rem;
+  text-transform: uppercase;
+  color: var(--project-clr-grey-dark);
+  cursor: pointer;
+}
+
+.reset--btn {
+  color: var(--project-clr-grey-light);
+  background-color: var(--project-clr-reset-btn);
+  margin-bottom: 1.8rem;
+}
+
+.send--btn {
+  background-color: var(--project-clr-send-btn);
+}
+
+/* footer */
+.done-by {
+  font-size: var(--font-12);
+  line-height: var(--line-height-15);
+  letter-spacing: var(--letter-space-n05);
+}
+
+.done-by--link,
+.done-by--link:link,
+.done-by--link:visited {
+  color: var(--clr-grey);
+  text-decoration: none;
+}
+
+.done-by--link:hover,
+.done-by--link:active {
+  border-bottom: 1px solid var(--clr-grey);
+}
+
+/* media queries */
