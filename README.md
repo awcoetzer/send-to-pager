@@ -19,18 +19,8 @@ We were given a figma [file](https://www.figma.com/file/M3viya1bG5eKyZJFflKJ7u/S
 #### PROJECT SCREENS
 _Some screenshots of the projects_
 
-![Hero Section]( 'Screenshot of the hero section of the the project')
+![Full project](./resources/images/readme/full-layout.png 'Screenshot of the full project')
 _This is the hero section of the page_
-
-<br>
-
-![Hero Section]( 'Screenshot of the required version of the project')
-_The required version of the project_
-
-<br>
-
-![Hero Section]( 'Screenshot of the stretch goal version of the project')
-_The stretch goal version of the project_
 
 <br>
 
@@ -54,6 +44,7 @@ _Repository tree/blobs_
       * [readme/](./resources/images/readme/)
     * [javascript/](./resources/javascript/)
         * [app.js](./resources/javascript/app.js)
+    * [sounds](./resources/sounds/)
 * [index.html](./index.html)
 * [README.md](./README.md)
 
@@ -83,17 +74,54 @@ _Figma file, Colours, Fonts & basic file setup pertaining to this project._
 * Figma file can be found [here](https://www.figma.com/file/M3viya1bG5eKyZJFflKJ7u/Send-to-Pager-(Copy)?node-id=0-1&t=ZSgk41Y6cUbZd56R-0)
 * Font used within project
   * ```html
-      
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
     ```
 
   * ```css
+      --typeface-sans: 'Inter', sans-serif;
 
+      /* project typeface */
+      --project-typeface-press-start: 'Press Start 2P', cursive;
     ```
+
 * Color palette used within project
   * ```css
       /* project color palettes */
+       --clr-main-shade: hsl(45, 100%, 60%);
+       --clr-main: hsl(45, 100%, 70%);
+       --clr-main-tint: hsl(45, 100%, 80%);
+
+       --clr-grey: hsl(0, 0%, 20%);
+
+       --clr-accent-shade: ;
+       --clr-accent-pink: hsl(315, 100%, 70%);
+       --clr-accent-purple: hsl(240, 100%, 70%);
+       --clr-accent-tint: ;
 
       /* figma project color palette */
+       --project-clr-pager-bg: hsl(196, 12%, 18%);
+       --project-clr-pager-display-bg: hsl(153, 24%, 69%);
+       --project-clr-pager-display-bg-tint: hsl(153, 24%, 89%);
+       --project-clr-phone-bg: hsl(0, 0%, 85%);
+       --project-clr-phone-display-bg: hsl(0, 0%, 27%);
+
+       --project-clr-reset-btn: hsl(12, 64%, 45%);
+       --project-clr-send-btn: hsl(160, 44%, 43%);
+
+       --project-clr-border: hsl(0, 0%, 0%);
+
+       --project-clr-main-shade: ;
+       --project-clr-main: ;
+       --project-clr-main-tint: ;
+
+       --project-clr-grey-light: hsl(0, 0%, 97%);
+       --project-clr-grey-dark: hsl(0, 0%, 0%);
+
+       --project-clr-accent-shade: ;
+       --project-clr-accent: ;
+       --project-clr-accent-tint: ;
 
     ```
 * General project variables layout
